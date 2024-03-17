@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "surveys",
+  "info": {
+    "singularName": "survey",
+    "pluralName": "surveys",
+    "displayName": "survey"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "I01": {
+      "type": "string"
+    },
+    "I02": {
+      "type": "string"
+    },
+    "I03": {
+      "type": "string"
+    },
+    "P02": {
+      "type": "string"
+    },
+    "P03": {
+      "type": "string"
+    },
+    "P0701": {
+      "type": "string"
+    },
+    "P0702": {
+      "type": "string"
+    },
+    "P0703": {
+      "type": "string"
+    },
+    "P0704": {
+      "type": "string"
+    },
+    "P0705": {
+      "type": "string"
+    },
+    "P0706": {
+      "type": "string"
+    },
+    "P11R": {
+      "type": "string"
+    },
+    "P31": {
+      "type": "string"
+    },
+    "P3203": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dni": {
+      "type": "string"
+    }
+  }
+}

@@ -362,6 +362,51 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiSurveySurvey extends Schema.CollectionType {
+  collectionName: 'surveys';
+  info: {
+    singularName: 'survey';
+    pluralName: 'surveys';
+    displayName: 'survey';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    I01: Attribute.String;
+    I02: Attribute.String;
+    I03: Attribute.String;
+    P02: Attribute.String;
+    P03: Attribute.String;
+    P0701: Attribute.String;
+    P0702: Attribute.String;
+    P0703: Attribute.String;
+    P0704: Attribute.String;
+    P0705: Attribute.String;
+    P0706: Attribute.String;
+    P11R: Attribute.String;
+    P31: Attribute.String;
+    P3203: Attribute.String;
+    name: Attribute.String;
+    dni: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::survey.survey',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::survey.survey',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -798,6 +843,7 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::survey.survey': ApiSurveySurvey;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
