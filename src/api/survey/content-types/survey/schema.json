@@ -4,7 +4,8 @@
   "info": {
     "singularName": "survey",
     "pluralName": "surveys",
-    "displayName": "survey"
+    "displayName": "survey",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -57,7 +58,8 @@
       "type": "string"
     },
     "dni": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     }
   }
 }

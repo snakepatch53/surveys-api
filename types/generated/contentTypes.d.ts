@@ -368,6 +368,7 @@ export interface ApiSurveySurvey extends Schema.CollectionType {
     singularName: 'survey';
     pluralName: 'surveys';
     displayName: 'survey';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -388,7 +389,7 @@ export interface ApiSurveySurvey extends Schema.CollectionType {
     P31: Attribute.String;
     P3203: Attribute.String;
     name: Attribute.String;
-    dni: Attribute.String;
+    dni: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
